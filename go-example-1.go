@@ -12,11 +12,10 @@ func makeCounter() func() int {
 func main() {
 	defer fmt.Println("End of the program")
 	var counter = makeCounter()
-	var result int
 	fmt.Println("Start of the program")
 
 	for i := 0; i < 10; i++ {
-		result = counter()
+		result := counter()
 		if result > 5 {
 			fmt.Println("Break")
 			break
